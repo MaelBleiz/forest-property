@@ -403,26 +403,3 @@ footer {
     padding: 2rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1.1rem;
-    }
-
-    .nav-links {
-        gap: 1rem;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    section {
-        padding: 3rem 1rem;
-    }
-}

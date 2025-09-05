@@ -1,0 +1,353 @@
+/* Mobile devices (up to 600px) */
+@media (max-width: 600px) {
+    body {
+        font-size: 1rem;
+        padding: 0;
+    }
+    
+    /* Header */
+    nav {
+        flex-direction: column;
+        padding: 0 var(--spacing-sm);
+        gap: var(--spacing-sm);
+    }
+    
+    .logo {
+        font-size: var(--font-size-lg);
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        text-align: center;
+        width: 100%;
+    }
+    
+    /* Hero Section */
+    .hero {
+        height: 70vh;
+        padding: var(--spacing-sm);
+    }
+    
+    .hero-content {
+        max-width: 100%;
+        padding: var(--spacing-sm);
+    }
+    
+    .hero h1 {
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .hero p {
+        font-size: var(--font-size-base);
+        padding: var(--spacing-sm);
+    }
+    
+    .cta-button {
+        padding: 12px 24px;
+        font-size: var(--font-size-base);
+    }
+    
+    /* Sections */
+    section, section1 {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+    
+    h2 {
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .gallery-item {
+        aspect-ratio: 3/2;
+    }
+    
+    .gallery-overlay {
+        padding: var(--spacing-sm);
+        font-size: var(--font-size-base);
+    }
+    
+    /* FAQ */
+    .faq-container {
+        max-width: 100%;
+    }
+    
+    .faq-question {
+        padding: var(--spacing-sm);
+        font-size: var(--font-size-base);
+    }
+    
+    .faq-answer {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .faq-answer.active {
+        padding: var(--spacing-sm);
+    }
+    
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .contact-form {
+        padding: var(--spacing-sm);
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+        font-size: var(--font-size-base);
+    }
+    
+    .submit-btn {
+        padding: 12px;
+        font-size: var(--font-size-base);
+    }
+    
+    /* Location */
+    .location-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+}
+
+/* Tablets (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 1.25rem;
+        padding: 0;
+    }
+    
+    /* Header */
+    nav {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .logo {
+        font-size: calc(var(--font-size-base) * 1.3);
+    }
+    
+    .nav-links {
+        gap: var(--spacing-md);
+    }
+    
+    /* Hero Section */
+    .hero {
+        height: 80vh;
+    }
+    
+    .hero-content {
+        max-width: 700px;
+        padding: var(--spacing-md);
+    }
+    
+    .hero h1 {
+        font-size: var(--font-size-xxl);
+    }
+    
+    .hero p {
+        font-size: var(--font-size-lg);
+        padding: var(--spacing-md);
+    }
+    
+    .cta-button {
+        padding: 14px 28px;
+        font-size: calc(var(--font-size-base) * 1.05);
+    }
+    
+    /* Sections */
+    section, section1 {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    h2 {
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: var(--spacing-md);
+    }
+    
+    .gallery-item {
+        aspect-ratio: 4/3;
+    }
+    
+    .gallery-overlay {
+        padding: var(--spacing-md) var(--spacing-sm) var(--spacing-sm);
+        font-size: calc(var(--font-size-base) * 1.1);
+    }
+    
+    /* FAQ */
+    .faq-container {
+        max-width: 700px;
+    }
+    
+    .faq-question {
+        padding: calc(var(--spacing-sm) * 1.25);
+        font-size: calc(var(--font-size-base) * 0.95);
+    }
+    
+    .faq-answer.active {
+        padding: calc(var(--spacing-sm) * 1.25);
+    }
+    
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .contact-form {
+        padding: var(--spacing-md);
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 11px;
+        font-size: calc(var(--font-size-base) * 0.9);
+    }
+    
+    .submit-btn {
+        padding: 14px;
+        font-size: calc(var(--font-size-base) * 0.95);
+    }
+    
+    /* Location */
+    .location-container {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-lg);
+    }
+}
+
+/* Desktops (above 1024px) */
+@media (min-width: 1025px) {
+    body {
+        font-size: var(--font-size-base);
+        padding: 0;
+    }
+    
+    /* Header */
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 var(--spacing-md);
+    }
+    
+    .logo {
+        font-size: calc(var(--font-size-base) * 1.5);
+    }
+    
+    .nav-links {
+        gap: var(--spacing-md);
+    }
+    
+    /* Hero Section */
+    .hero {
+        height: 100vh;
+    }
+    
+    .hero-content {
+        max-width: 800px;
+        padding: var(--spacing-md);
+    }
+    
+    .hero h1 {
+        font-size: var(--font-size-xxl);
+    }
+    
+    .hero p {
+        font-size: var(--font-size-lg);
+        padding: var(--spacing-md);
+    }
+    
+    .cta-button {
+        padding: 15px 30px;
+        font-size: calc(var(--font-size-base) * 1.1);
+    }
+    
+    /* Sections */
+    section, section1 {
+        padding: var(--spacing-xl) var(--spacing-md);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    h2 {
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: var(--spacing-md);
+        margin-top: var(--spacing-lg);
+    }
+    
+    .gallery-item {
+        aspect-ratio: 4/3;
+    }
+    
+    .gallery-overlay {
+        padding: var(--spacing-md) var(--spacing-sm) var(--spacing-sm);
+        font-size: calc(var(--font-size-base) * 1.2);
+    }
+    
+    /* FAQ */
+    .faq-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .faq-question {
+        padding: calc(var(--spacing-sm) * 1.5);
+        font-size: var(--font-size-base);
+    }
+    
+    .faq-answer.active {
+        padding: calc(var(--spacing-sm) * 1.5);
+        max-height: 200px;
+    }
+    
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: start;
+    }
+    
+    .contact-form {
+        padding: var(--spacing-md);
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 1rem;
+    }
+    
+    .submit-btn {
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+    
+    /* Location */
+    .location-container {
+        grid-template-columns: 1fr 2fr;
+        gap: 4rem;
+        align-items: start;
+    }
+}
+
