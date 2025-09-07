@@ -96,21 +96,31 @@ nav {
     height: 100vh;
     width: 100vw;
     position: relative;
-    background: url('images/image1.JPG');
-    background-size: cover;
-    background-position: center;
     transition: opacity 2s ease-in-out;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    overflow: hidden;
 }
 
 .hero-content {
     max-width: 800px;
     color: var(--color-white);
     padding: var(--spacing-md);
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
 }
 
 .hero h1 {
@@ -159,7 +169,7 @@ section1 {
 
 section {
     padding: 5rem 2rem;
-    max-width: 1200px;
+    max-width: 100vw;
     margin: 0 auto;
 }
 
