@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2 Hectare Forest Property - For Sale</title>
+    <title>2 Hektar Waldgrundstück - Zu verkaufen</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="css/media-queries.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rye&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
     
 </head>
@@ -20,10 +17,10 @@
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">Forest Property</div>
+            <div class="logo">Waldgrundstück</div>
             <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#hero">Startseite</a></li>
+                <li><a href="#gallery">Galerie</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
@@ -31,25 +28,60 @@
     </header>
 
     <!-- Hero Section -->
-    <section1 id="hero" class="hero">
-        <div class="hero-content">
+    <div id="hero" class="hero">
+        <div class="slideshow-container">
+            <div class="slide active">
+                <img src="images/image1.JPG" alt="Waldgrundstück">
+                <div class="slide-content">
+                    <h1>2 Hektar Waldgrundstück</h1>
+                    <p>Entdecken Sie dieses wunderschöne Mischwald-Grundstück in erstklassiger Lage</p>
+                    <a href="#contact" class="cta-button">Kontaktieren Sie uns</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/image4.jpg" alt="Waldansicht">
+                <div class="slide-content">
+                    <h1>Alter und junger Baumbestand</h1>
+                    <p>Ein gesunder Mix aus etablierten und jungen Bäumen</p>
+                    <a href="#gallery" class="cta-button">Galerie ansehen</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/image6.jpg" alt="Mischwald">
+                <div class="slide-content">
+                    <h1>Gesunder Mischwald</h1>
+                    <p>Buche, Rotföhre, Eiche, Fichte und vieles mehr</p>
+                    <a href="#faq" class="cta-button">Mehr erfahren</a>
+                </div>
+            </div>
         </div>
-    </section1>
+        
+        <!-- Navigation arrows -->
+        <button class="prev" onclick="changeSlide(-1)">‹</button>
+        <button class="next" onclick="changeSlide(1)">›</button>
+        
+        <!-- Dots indicators -->
+        <div class="dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
 
     <!-- Gallery Section -->
     <section id="gallery">
-        <h2>Explore</h2>
+        <h2>Erkunden</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="images/image4.jpg" alt="Forest view">
+                <img src="images/image4.jpg" alt="Waldansicht">
                 <div class="gallery-overlay">Alte und junge Bäume</div>
             </div>
             <div class="gallery-item">
-                <img src="images/image6.jpg" alt="Forest view">
+                <img src="images/image6.jpg" alt="Waldansicht">
                 <div class="gallery-overlay">Gesunder Mischwald: Buche, Rotföhre, Eiche, Fichte...</div>
             </div>
             <div class="gallery-item">
-                <img src="images/image5.jpg" alt="Firewood">
+                <img src="images/image5.jpg" alt="Brennholz">
                 <div class="gallery-overlay">Kaminholz</div>
             </div>
             <div class="gallery-item">
@@ -60,14 +92,14 @@
     </section>
 <!-- Location Section -->
 <section id="location">
-    <h2>Property Location</h2>
+    <h2>Lage des Grundstücks</h2>
     <div class="location-container">
         <div class="location-info">
-            <h3>Find Us Here</h3>
-            <p><strong>Address:</strong> [Your exact property address]</p>
-            <p><strong>Coordinates:</strong> [Latitude, Longitude]</p>
-            <p><strong>Access:</strong> Direct road access via [Road Name]</p>
-            <p>The property is easily accessible and located in a prime forest area with excellent connectivity to main roads while maintaining complete privacy and natural surroundings.</p>
+            <h3>Hier finden Sie uns</h3>
+            <p><strong>Adresse:</strong> Gleich nach der Therme Bad Loipersdorf</p>
+            <p><strong>Zugang:</strong> Direkter Straßenzugang über die Thermenstraße</p>
+            <p>Das Grundstück ist leicht zugänglich und befindet sich in einem erstklassigen Waldgebiet mit hervorragender Anbindung an Hauptstraßen bei vollständiger Privatsphäre und natürlicher Umgebung.</p>
+            <p><strong>Grund des Verkauf:</strong>  Umzug ins Ausland</p>
         </div>
         <div class="map-container">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2675.5763232707445!2d16.109614718426684!3d46.98392433605215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sat!4v1755875700505!5m2!1sfr!2sat" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -78,7 +110,7 @@
 
     <!-- FAQ Section -->
     <section id="faq">
-        <h2>Frequently Asked Questions</h2>
+        <h2>Häufig gestellte Fragen</h2>
         <div class="faq-container">
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
@@ -123,41 +155,40 @@
         <h2>Kontakt</h2>
         <div class="contact-grid">
             <div class="contact-info">
-                <h3>Property Details</h3>
-                <p><strong>Size:</strong> 2 Hectares (5 acres)</p>
-                <p><strong>Type:</strong> Mixed Forest Land</p>
-                <p><strong>Access:</strong> Direct road access</p>
-                <p><strong>Price:</strong> Contact for details</p>
+                <h3>Grundstücksdetails</h3>
+                <p><strong>Größe:</strong> 2.5 Hektar</p>
+                <p><strong>Typ:</strong> Mischwald</p>
+                <p><strong>Zugang:</strong> Direkter Straßenzugang</p>
+                <p><strong>Preis:</strong> 65.000€</p>
                 
-                <h3>Contact Information</h3>
-                <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-                <p><strong>Email:</strong> info@forestproperty.com</p>
-                <p><strong>Address:</strong> Forest Property Office<br>123 Woodland Drive</p>
+                <h3>Kontaktinformationen</h3>
+                <p><strong>Telefon:</strong> 680 32 53 818</p>
+                <p><strong>E-Mail:</strong> mael.le.ray@gmail.com</p>
             </div>
             
             <div class="contact-form">
                 <form onsubmit="submitForm(event)">
                     <div class="form-group">
-                        <label for="name">Full Name</label>
+                        <label for="name">Vollständiger Name</label>
                         <input type="text" id="name" name="name" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="email">Email Address</label>
+                        <label for="email">E-Mail-Adresse</label>
                         <input type="email" id="email" name="email" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
+                        <label for="phone">Telefonnummer</label>
                         <input type="tel" id="phone" name="phone">
                     </div>
                     
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Tell us about your interest in the property..." required></textarea>
+                        <label for="message">Nachricht</label>
+                        <textarea id="message" name="message" placeholder="Erzählen Sie uns von Ihrem Interesse am Grundstück..." required></textarea>
                     </div>
                     
-                    <button type="submit" class="submit-btn">Send Inquiry</button>
+                    <button type="submit" class="submit-btn">Anfrage senden</button>
                 </form>
             </div>
         </div>
@@ -165,7 +196,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Forest Property Sale. All rights reserved. | Professional forest land specialists.</p>
+        <p>&copy; mael.le.ray@gmail.com | Waldgrundstück in Bad Loipersdorf</p>
     </footer>
     <script src="/js/main.js"></script>
 </body>

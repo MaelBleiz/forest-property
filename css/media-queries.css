@@ -25,8 +25,41 @@
     
     /* Hero Section */
     .hero {
-        height: 70vh;
+        height: 100vh;
+    }
+    
+    .slide-content {
         padding: var(--spacing-sm);
+        max-width: 90%;
+    }
+    
+    .slide-content h1 {
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .slide-content p {
+        font-size: var(--font-size-base);
+        padding: var(--spacing-sm);
+    }
+    
+    .cta-button {
+        padding: 12px 24px;
+        font-size: var(--font-size-base);
+    }
+    
+    .prev, .next {
+        padding: 15px 10px;
+        font-size: 20px;
+    }
+    
+    .dots {
+        bottom: 20px;
+    }
+    
+    .dot {
+        width: 12px;
+        height: 12px;
     }
     
     .hero-content {
@@ -280,7 +313,6 @@
     /* Sections */
     section, section1 {
         padding: var(--spacing-xl) var(--spacing-md);
-        max-width: 1200px;
         margin: 0 auto;
     }
     

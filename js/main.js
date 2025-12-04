@@ -1,54 +1,51 @@
-const heroElement = document.querySelector('.hero');
-const images = ['image2.JPG', 'image1.JPG', 'image3.JPG'];
-let currentImageIndex = 0;
+// Slideshow functionality
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
 
-function preloadImages() {
-    images.forEach(image => {
-        const img = new Image();
-        img.src = `images/${image}`;
-    });
-}
-
-function changeBackgroundImage() {
-    // Create a new div for the next image
-    const nextImage = document.createElement('div');
-    nextImage.style.cssText = `
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('images/${images[currentImageIndex]}') center/cover no-repeat;
-        opacity: 0;
-        z-index: 1;
-    `;
+function showSlide(index) {
+    // Hide all slides
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
     
-    heroElement.appendChild(nextImage);
-
-    // Fade in the new image
-    setTimeout(() => {
-        nextImage.style.opacity = '1';
-    }, 50);
-
-    // After transition, clean up and prepare for next
-    setTimeout(() => {
-        heroElement.style.background = `url('images/${images[currentImageIndex]}') center/cover no-repeat`;
-        heroElement.removeChild(nextImage);
-    }, 2000);
-
-    currentImageIndex = (currentImageIndex + 1) % images.length;
+    // Show current slide
+    if (slides[index]) {
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+    }
 }
 
-// Preload images
-preloadImages();
+function changeSlide(direction) {
+    currentSlideIndex += direction;
+    
+    if (currentSlideIndex >= slides.length) {
+        currentSlideIndex = 0;
+    } else if (currentSlideIndex < 0) {
+        currentSlideIndex = slides.length - 1;
+    }
+    
+    showSlide(currentSlideIndex);
+}
 
-// Change image every 7 seconds (giving more time for the transition)
-setInterval(changeBackgroundImage, 7000);
+function currentSlide(index) {
+    currentSlideIndex = index - 1;
+    showSlide(currentSlideIndex);
+}
 
-// Initialize the first background
-heroElement.style.background = `url('images/${images[0]}') center/cover no-repeat`;
+// Auto-advance slideshow every 5 seconds
+function autoSlide() {
+    changeSlide(1);
+}
 
-       // FAQ Toggle Function
+// Initialize slideshow when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    if (slides.length > 0) {
+        showSlide(0);
+        setInterval(autoSlide, 5000);
+    }
+});
+
+// FAQ Toggle Function
         function toggleFaq(element) {
             const answer = element.nextElementSibling;
             const isActive = answer.classList.contains('active');
