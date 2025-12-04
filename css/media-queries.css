@@ -313,6 +313,7 @@
     /* Sections */
     section, section1 {
         padding: var(--spacing-xl) var(--spacing-md);
+        max-width: 1200px;
         margin: 0 auto;
     }
     
