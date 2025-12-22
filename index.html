@@ -31,7 +31,7 @@
     <div id="hero" class="hero">
         <div class="slideshow-container">
             <div class="slide active">
-                <img src="images/image2.JPG" alt="Waldgrundstück">
+                <img src="images/image2.jpg" alt="Waldgrundstück">
                 <div class="slide-content">
                     <h1>2 Hektar Waldgrundstück</h1>
                 </div>
@@ -67,11 +67,11 @@
         <h2>Erkunden</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="images/image4.JPG" alt="Waldansicht">
+                <img src="images/image4.jpg" alt="Waldansicht">
                 <div class="gallery-overlay">Alte und junge Bäume</div>
             </div>
             <div class="gallery-item">
-                <img src="images/image6.JPG" alt="Waldansicht">
+                <img src="images/image6.jpg" alt="Waldansicht">
                 <div class="gallery-overlay">Gesunder Mischwald: Buche, Rotföhre, Eiche, Fichte...</div>
             </div>
             <div class="gallery-item">
@@ -169,7 +169,7 @@
             </div>
             
             <div class="contact-form">
-                <form onsubmit="submitForm(event)">
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                     <div class="form-group">
                         <label for="name">Vollständiger Name</label>
                         <input type="text" id="name" name="name" required>
@@ -189,6 +189,15 @@
                         <label for="message">Nachricht</label>
                         <textarea id="message" name="message" placeholder="Erzählen Sie uns von Ihrem Interesse am Grundstück..." required></textarea>
                     </div>
+                    
+                    <!-- Hidden field to identify the subject -->
+                    <input type="hidden" name="_subject" value="Waldgrundstück Anfrage - Bad Loipersdorf">
+                    
+                    <!-- Redirect after successful submission -->
+                    <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+                    
+                    <!-- Honeypot for spam protection -->
+                    <input type="text" name="_gotcha" style="display:none">
                     
                     <button type="submit" class="submit-btn">Anfrage senden</button>
                 </form>
