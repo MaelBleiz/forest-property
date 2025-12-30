@@ -43,6 +43,28 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlide(0);
         setInterval(autoSlide, 5000);
     }
+    // Mobile hamburger menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', function() {
+            const isOpen = navLinks.classList.toggle('open');
+            // Toggle class on hamburger for CSS animation and update aria-expanded
+            hamburger.classList.toggle('open', isOpen);
+            hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        // Close menu when a nav link is clicked (mobile)
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', function() {
+                if (navLinks.classList.contains('open')) {
+                    navLinks.classList.remove('open');
+                    hamburger.classList.remove('open');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    }
 });
 
 // FAQ Toggle Function
