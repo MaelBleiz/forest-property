@@ -98,13 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
-        // Form Submission
-        function submitForm(event) {
-            event.preventDefault();
-            alert('Thank you for your inquiry! We will contact you within 24 hours.');
-            event.target.reset();
-        }
-
         // Smooth Scrolling for Navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
