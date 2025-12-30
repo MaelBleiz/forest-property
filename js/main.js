@@ -64,6 +64,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
+
+        // Close menu when clicking outside of the nav or hamburger
+        document.addEventListener('click', function(event) {
+            if (!navLinks.classList.contains('open')) return;
+            const target = event.target;
+            if (!navLinks.contains(target) && !hamburger.contains(target)) {
+                navLinks.classList.remove('open');
+                hamburger.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
+        });
     }
 });
 
